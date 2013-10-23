@@ -16,6 +16,6 @@
 	<forum></forum>
     <website></website>
     <email></email>
-    <source></source>
+    <source>https://github.com/XBMC-Addons/script.xbmc.audio.mixer</source>
   </extension>
 </addon>
