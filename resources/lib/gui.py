@@ -29,11 +29,8 @@ __scriptname__ = sys.modules[ "__main__" ].__scriptname__
 __version__    = sys.modules[ "__main__" ].__version__
 __addon__      = sys.modules[ "__main__" ].__addon__
 
-CONTROL_APPLY = 98
-CONTROL_SAVE  = 99
 
-EXIT_SCRIPT   = ( 9, 10, 101, 247, 275, 61467, )
-CANCEL_DIALOG = EXIT_SCRIPT + ( 216, 257, 61448, )
+CANCEL_DIALOG = EXIT_SCRIPT + (  9, 10, 216, 247, 257, 275, 61448, 61467, )
 
 
 class GUI( xbmcgui.WindowXMLDialog ):
