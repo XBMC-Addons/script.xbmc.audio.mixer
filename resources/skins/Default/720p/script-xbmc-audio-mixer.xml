@@ -4,7 +4,6 @@
 	<animation effect="fade" time="250">WindowOpen</animation>
 	<animation effect="fade" time="250">WindowClose</animation>
 	<coordinates>
-		<system>1</system>
 		<posx>200</posx>
 		<posy>45</posy>
 	</coordinates>
@@ -65,10 +64,6 @@
 				<description>ControlGroup</description>
 				<width>800</width>
 				<height>50</height>
-				<onup>2</onup>
-				<ondown>3</ondown>
-				<onleft>98</onleft>
-				<onright>121</onright>
 				<control type="radiobutton" id="901">
 					<description>mute button</description>
 					<posx>0</posx>
@@ -146,10 +141,6 @@
 				<width>800</width>
 				<height>50</height>
 				<visible>Control.IsVisible(1000)</visible>
-				<onup>2</onup>
-				<ondown>3</ondown>
-				<onleft>98</onleft>
-				<onright>121</onright>
 				<control type="radiobutton" id="902">
 					<description>mute button</description>
 					<posx>0</posx>
@@ -227,10 +218,6 @@
 				<width>800</width>
 				<height>50</height>
 				<visible>Control.IsVisible(2000)</visible>
-				<onup>2</onup>
-				<ondown>3</ondown>
-				<onleft>98</onleft>
-				<onright>121</onright>
 				<control type="radiobutton" id="903">
 					<description>mute button</description>
 					<posx>0</posx>
@@ -308,10 +295,6 @@
 				<width>800</width>
 				<height>50</height>
 				<visible>Control.IsVisible(3000)</visible>
-				<onup>2</onup>
-				<ondown>3</ondown>
-				<onleft>98</onleft>
-				<onright>121</onright>
 				<control type="radiobutton" id="904">
 					<description>mute button</description>
 					<posx>0</posx>
@@ -389,10 +372,6 @@
 				<width>800</width>
 				<height>50</height>
 				<visible>Control.IsVisible(4000)</visible>
-				<onup>2</onup>
-				<ondown>3</ondown>
-				<onleft>98</onleft>
-				<onright>121</onright>
 				<control type="radiobutton" id="905">
 					<description>mute button</description>
 					<posx>0</posx>
@@ -470,10 +449,6 @@
 				<width>800</width>
 				<height>50</height>
 				<visible>Control.IsVisible(5000)</visible>
-				<onup>2</onup>
-				<ondown>3</ondown>
-				<onleft>98</onleft>
-				<onright>121</onright>
 				<control type="radiobutton" id="906">
 					<description>mute button</description>
 					<posx>0</posx>
@@ -551,10 +526,6 @@
 				<width>800</width>
 				<height>50</height>
 				<visible>Control.IsVisible(6000)</visible>
-				<onup>2</onup>
-				<ondown>3</ondown>
-				<onleft>98</onleft>
-				<onright>121</onright>
 				<control type="radiobutton" id="907">
 					<description>mute button</description>
 					<posx>0</posx>
@@ -632,10 +603,6 @@
 				<width>800</width>
 				<height>50</height>
 				<visible>Control.IsVisible(7000)</visible>
-				<onup>2</onup>
-				<ondown>3</ondown>
-				<onleft>98</onleft>
-				<onright>121</onright>
 				<control type="radiobutton" id="908">
 					<description>mute button</description>
 					<posx>0</posx>
@@ -713,10 +680,6 @@
 				<width>800</width>
 				<height>50</height>
 				<visible>Control.IsVisible(8000)</visible>
-				<onup>2</onup>
-				<ondown>3</ondown>
-				<onleft>98</onleft>
-				<onright>121</onright>
 				<control type="radiobutton" id="909">
 					<description>mute button</description>
 					<posx>0</posx>
@@ -794,10 +757,6 @@
 				<width>800</width>
 				<height>50</height>
 				<visible>Control.IsVisible(9000)</visible>
-				<onup>2</onup>
-				<ondown>3</ondown>
-				<onleft>98</onleft>
-				<onright>121</onright>
 				<control type="radiobutton" id="910">
 					<description>mute button</description>
 					<posx>0</posx>
@@ -875,10 +834,6 @@
 				<width>800</width>
 				<height>50</height>
 				<visible>Control.IsVisible(10000)</visible>
-				<onup>2</onup>
-				<ondown>3</ondown>
-				<onleft>98</onleft>
-				<onright>121</onright>
 				<control type="radiobutton" id="911">
 					<description>mute button</description>
 					<posx>0</posx>
@@ -956,10 +911,6 @@
 				<width>800</width>
 				<height>50</height>
 				<visible>Control.IsVisible(11000)</visible>
-				<onup>2</onup>
-				<ondown>3</ondown>
-				<onleft>98</onleft>
-				<onright>121</onright>
 				<control type="radiobutton" id="912">
 					<description>mute button</description>
 					<posx>0</posx>
@@ -1037,10 +988,6 @@
 				<width>800</width>
 				<height>50</height>
 				<visible>Control.IsVisible(12000)</visible>
-				<onup>2</onup>
-				<ondown>3</ondown>
-				<onleft>98</onleft>
-				<onright>121</onright>
 				<control type="radiobutton" id="913">
 					<description>mute button</description>
 					<posx>0</posx>
@@ -1118,10 +1065,6 @@
 				<width>800</width>
 				<height>50</height>
 				<visible>Control.IsVisible(13000)</visible>
-				<onup>2</onup>
-				<ondown>3</ondown>
-				<onleft>98</onleft>
-				<onright>121</onright>
 				<control type="radiobutton" id="914">
 					<description>mute button</description>
 					<posx>0</posx>
@@ -1199,10 +1142,6 @@
 				<width>800</width>
 				<height>50</height>
 				<visible>Control.IsVisible(14000)</visible>
-				<onup>2</onup>
-				<ondown>3</ondown>
-				<onleft>98</onleft>
-				<onright>121</onright>
 				<control type="radiobutton" id="915">
 					<description>mute button</description>
 					<posx>0</posx>
@@ -1280,10 +1219,6 @@
 				<width>800</width>
 				<height>50</height>
 				<visible>Control.IsVisible(15000)</visible>
-				<onup>2</onup>
-				<ondown>3</ondown>
-				<onleft>98</onleft>
-				<onright>121</onright>
 				<control type="radiobutton" id="916">
 					<description>mute button</description>
 					<posx>0</posx>
@@ -1361,10 +1296,6 @@
 				<width>800</width>
 				<height>50</height>
 				<visible>Control.IsVisible(16000)</visible>
-				<onup>2</onup>
-				<ondown>3</ondown>
-				<onleft>98</onleft>
-				<onright>121</onright>
 				<control type="radiobutton" id="917">
 					<description>mute button</description>
 					<posx>0</posx>
@@ -1442,10 +1373,6 @@
 				<width>800</width>
 				<height>50</height>
 				<visible>Control.IsVisible(17000)</visible>
-				<onup>2</onup>
-				<ondown>3</ondown>
-				<onleft>98</onleft>
-				<onright>121</onright>
 				<control type="radiobutton" id="918">
 					<description>mute button</description>
 					<posx>0</posx>
@@ -1523,10 +1450,6 @@
 				<width>800</width>
 				<height>50</height>
 				<visible>Control.IsVisible(18000)</visible>
-				<onup>2</onup>
-				<ondown>3</ondown>
-				<onleft>98</onleft>
-				<onright>121</onright>
 				<control type="radiobutton" id="919">
 					<description>mute button</description>
 					<posx>0</posx>
@@ -1604,10 +1527,6 @@
 				<width>800</width>
 				<height>50</height>
 				<visible>Control.IsVisible(19000)</visible>
-				<onup>2</onup>
-				<ondown>3</ondown>
-				<onleft>98</onleft>
-				<onright>121</onright>
 				<control type="radiobutton" id="920">
 					<description>mute button</description>
 					<posx>0</posx>
@@ -1684,10 +1603,6 @@
 				<width>800</width>
 				<height>50</height>
 				<visible>Control.IsVisible(20000)</visible>
-				<onup>2</onup>
-				<ondown>3</ondown>
-				<onleft>98</onleft>
-				<onright>121</onright>
 				<control type="radiobutton" id="921">
 					<description>mute button</description>
 					<posx>0</posx>
@@ -1765,10 +1680,6 @@
 				<width>800</width>
 				<height>50</height>
 				<visible>Control.IsVisible(21000)</visible>
-				<onup>2</onup>
-				<ondown>3</ondown>
-				<onleft>98</onleft>
-				<onright>121</onright>
 				<control type="radiobutton" id="922">
 					<description>mute button</description>
 					<posx>0</posx>
@@ -1846,10 +1757,6 @@
 				<width>800</width>
 				<height>50</height>
 				<visible>Control.IsVisible(22000)</visible>
-				<onup>2</onup>
-				<ondown>3</ondown>
-				<onleft>98</onleft>
-				<onright>121</onright>
 				<control type="radiobutton" id="923">
 					<description>mute button</description>
 					<posx>0</posx>
@@ -1927,10 +1834,6 @@
 				<width>800</width>
 				<height>50</height>
 				<visible>Control.IsVisible(23000)</visible>
-				<onup>2</onup>
-				<ondown>3</ondown>
-				<onleft>98</onleft>
-				<onright>121</onright>
 				<control type="radiobutton" id="924">
 					<description>mute button</description>
 					<posx>0</posx>
@@ -2008,10 +1911,6 @@
 				<width>800</width>
 				<height>50</height>
 				<visible>Control.IsVisible(24000)</visible>
-				<onup>2</onup>
-				<ondown>3</ondown>
-				<onleft>98</onleft>
-				<onright>121</onright>
 				<control type="radiobutton" id="925">
 					<description>mute button</description>
 					<posx>0</posx>
@@ -2089,10 +1988,6 @@
 				<width>800</width>
 				<height>50</height>
 				<visible>Control.IsVisible(25000)</visible>
-				<onup>2</onup>
-				<ondown>3</ondown>
-				<onleft>98</onleft>
-				<onright>121</onright>
 				<control type="radiobutton" id="926">
 					<description>mute button</description>
 					<posx>0</posx>
@@ -2170,10 +2065,6 @@
 				<width>800</width>
 				<height>50</height>
 				<visible>Control.IsVisible(26000)</visible>
-				<onup>2</onup>
-				<ondown>3</ondown>
-				<onleft>98</onleft>
-				<onright>121</onright>
 				<control type="radiobutton" id="927">
 					<description>mute button</description>
 					<posx>0</posx>
@@ -2251,10 +2142,6 @@
 				<width>800</width>
 				<height>50</height>
 				<visible>Control.IsVisible(27000)</visible>
-				<onup>2</onup>
-				<ondown>3</ondown>
-				<onleft>98</onleft>
-				<onright>121</onright>
 				<control type="radiobutton" id="928">
 					<description>mute button</description>
 					<posx>0</posx>
@@ -2332,10 +2219,6 @@
 				<width>800</width>
 				<height>50</height>
 				<visible>Control.IsVisible(28000)</visible>
-				<onup>2</onup>
-				<ondown>3</ondown>
-				<onleft>98</onleft>
-				<onright>121</onright>
 				<control type="radiobutton" id="929">
 					<description>mute button</description>
 					<posx>0</posx>
@@ -2413,10 +2296,6 @@
 				<width>800</width>
 				<height>50</height>
 				<visible>Control.IsVisible(29000)</visible>
-				<onup>2</onup>
-				<ondown>3</ondown>
-				<onleft>98</onleft>
-				<onright>121</onright>
 				<control type="radiobutton" id="930">
 					<description>mute button</description>
 					<posx>0</posx>
@@ -2498,8 +2377,6 @@
 			<font>font13</font>
 			<align>right</align>
 			<subtype>page</subtype>
-			<onleft>99</onleft>
-			<onright>98</onright>
 			<ondown>901</ondown>
 			<onup>901</onup>
 			<textoffsetx>10</textoffsetx>

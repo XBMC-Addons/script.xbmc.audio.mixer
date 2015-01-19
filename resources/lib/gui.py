@@ -32,7 +32,7 @@ __addon__      = sys.modules[ "__main__" ].__addon__
 CONTROL_APPLY = 98
 CONTROL_SAVE  = 99
 
-EXIT_SCRIPT   = ( 9, 10, 247, 275, 61467, )
+EXIT_SCRIPT   = ( 9, 10, 101, 247, 275, 61467, )
 CANCEL_DIALOG = EXIT_SCRIPT + ( 216, 257, 61448, )
 
 
@@ -104,22 +104,6 @@ class GUI( xbmcgui.WindowXMLDialog ):
       
       self.counter += 1
     
-    def set_alsa_values( self ):
-      
-      for i in range((self.counter-1)):
-        control = self.getControl( (1000*(i+1))+900 ).getLabel()
-        label_value = self.getControl( (1000*(i+1))+903 ).getLabel().replace(" %","" )
-
-        if self.getControl( (i+1) + 900 ).isSelected():
-          if self.alsaCore.hasVolume(control):
-            self.alsaCore.setVolume( control, label_value )
-            self.alsaCore.setVolume( control, "off" )
-        else:
-          if not self.alsaCore.hasVolume(control):
-            self.alsaCore.setVolume( control, "on" )
-          else:
-            self.alsaCore.setVolume( control, "on" )
-            self.alsaCore.setVolume( control, label_value )
 
     def set_mute( self, controlId, set_label = True ):
       
@@ -146,7 +130,7 @@ class GUI( xbmcgui.WindowXMLDialog ):
       label_value = self.getControl( (1000*i)+903 ).getLabel().replace(" %","" )
       self.alsaCore.setVolume( control, label_value )
 
-    def exit_script( self, restart=False ):
+    def exit_script( self ):
       self.close()
 
     def onClick( self, controlId ):
@@ -191,7 +175,7 @@ class GUI( xbmcgui.WindowXMLDialog ):
           
         if ( action.getButtonCode() in CANCEL_DIALOG ):
           self.log("Exit")
-          if ( self.controlId >= 1000 ) or (action.getId() == 92):
+          if ( self.controlId >= 1000 ):
               self.slider_onfocus(0)
               self.controlId = 0
           self.exit_script()
