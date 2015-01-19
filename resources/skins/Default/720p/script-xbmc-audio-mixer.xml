@@ -55,10 +55,10 @@
 			<orientation>vertical</orientation>
 			<usecontrolcoords>false</usecontrolcoords>
 			<visible>true</visible>
-			<onup>98</onup>
-			<ondown>98</ondown>
-			<onleft>98</onleft>
-			<onright>122</onright>
+			<onup>10</onup>
+			<ondown>10</ondown>
+			<onleft>121</onleft>
+			<onright>121</onright>
 
 			<control type="group" id="1000">
 				<description>ControlGroup</description>
@@ -82,7 +82,7 @@
 					<aligny>center</aligny>
 					<textoffsetx>40</textoffsetx>
 					<pulseonselect>true</pulseonselect>
-					<onup>930</onup>
+					<onup>10</onup>
 					<ondown>902</ondown>
 					<onleft>1902</onleft>
 					<onright>1902</onright>
@@ -2315,7 +2315,7 @@
 					<textoffsetx>40</textoffsetx>
 					<pulseonselect>true</pulseonselect>
 					<onup>929</onup>
-					<ondown>901</ondown>
+					<ondown>10</ondown>
 					<onleft>29902</onleft>
 					<onright>30902</onright>
 				</control>
@@ -2386,6 +2386,21 @@
 			<texturedownfocus>alsa-scroll-down-focus.png</texturedownfocus>
 			<showonepage>false</showonepage>
 			<visible>Control.IsVisible(17)</visible>
+		</control>
+		<control type="button" id="10">
+			<description>OK button</description>
+			<posx>340</posx>
+			<posy>560</posy>
+			<width>200</width>
+			<height>40</height>
+			<label>$LOCALIZE[186]</label>
+			<font>font12_title</font>
+			<textcolor>white</textcolor>
+			<focusedcolor>white</focusedcolor>
+			<align>center</align>
+			<texturefocus>alsa-button-focus.png</texturefocus>
+			<texturenofocus>alsa-button-nofocus.png</texturenofocus>
+			<onclick>Dialog.Close(all,true)</onclick>
 		</control>
 	</controls>
 </window>
