@@ -54,8 +54,8 @@
 			<visible>true</visible>
 			<onup>10</onup>
 			<ondown>10</ondown>
-			<onleft>121</onleft>
-			<onright>121</onright>
+			<onleft>17</onleft>
+			<onright>17</onright>
 			<control type="group" id="1000">
 				<description>ControlGroup</description>
 				<height>63</height>
@@ -2155,31 +2155,6 @@
 					<aligny>center</aligny>
 				</control>
 			</control>
-		</control>
-		<control type="spincontrol" id="121">
-			<description>Nextpagebutton</description>
-			<left>1200</left>
-			<top>750</top>
-			<width>44</width>
-			<height>44</height>
-			<align>right</align>
-			<font>font13</font>
-			<textcolor>white</textcolor>
-			<textureup>audiomixer-arrowup.png</textureup>
-			<texturedown>audiomixer-arrowdown.png</texturedown>
-			<textureupfocus colordiffuse="FF12B2E7">audiomixer-arrowup.png</textureupfocus>
-			<texturedownfocus colordiffuse="FF12B2E7">audiomixer-arrowdown.png</texturedownfocus>
-			<textureupdisabled colordiffuse="40FFFFFF">audiomixer-arrowup.png</textureupdisabled>
-			<texturedowndisabled colordiffuse="40FFFFFF">audiomixer-arrowdown.png</texturedowndisabled>
-			<textoffsetx>-5</textoffsetx>
-			<textoffsety>0</textoffsety>
-			<reverse>yes</reverse>
-			<subtype>page</subtype>
-			<pulseonselect>no</pulseonselect>
-			<showonepage>false</showonepage>
-			<ondown>901</ondown>
-			<onup>901</onup>
-			<visible>Control.IsVisible(17)</visible>
 		</control>
 		<control type="button" id="10">
 			<left>520</left>
