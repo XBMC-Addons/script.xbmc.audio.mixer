@@ -24,13 +24,11 @@ import os, sys
 import xbmc
 import xbmcgui
 
-_ = sys.modules[ "__main__" ].__language__
-__scriptname__ = sys.modules[ "__main__" ].__scriptname__
-__version__    = sys.modules[ "__main__" ].__version__
-__addon__      = sys.modules[ "__main__" ].__addon__
+ADDON     = sys.modules[ "__main__" ].ADDON
+ADDONNAME = sys.modules[ "__main__" ].ADDONNAME
 
 
-CANCEL_DIALOG = (  9, 10, 216, 247, 257, 275, 61448, 61467, )
+CANCEL_DIALOG = ( 9, 10, 92, 216, 247, 257, 275, 61467, 61448 )
 
 
 class GUI( xbmcgui.WindowXMLDialog ):
@@ -47,10 +45,9 @@ class GUI( xbmcgui.WindowXMLDialog ):
       else:  
         import alsaMixerCore
 
-      self.alsaCore = alsaMixerCore.alsaMixerCore(int(__addon__.getSetting( "debug" ) == "true"))
-      self.controls = self.alsaCore.getPlaybackControls()     
+      self.alsaCore = alsaMixerCore.alsaMixerCore(int(ADDON.getSetting( "debug" ) == "true"))
+      self.controls = self.alsaCore.getPlaybackControls()
       self.get_values()
-
 
     def get_values(self):
       controls = self.controls
@@ -63,20 +60,19 @@ class GUI( xbmcgui.WindowXMLDialog ):
             controls.remove(aControl)
             first_set = True
       self.getControl( 1000*self.counter ).setVisible( False )  
-    
+
     def set_gui_values( self, aControl ):
-      
       if not self.alsaCore.hasSwitch(aControl):
-          self.getControl( self.counter + 900 ).setVisible( False )
+        self.getControl( self.counter + 900 ).setVisible( False )
       if not self.alsaCore.hasVolume(aControl):
-          self.getControl( (1000*self.counter)+902 ).setVisible( False )
-          self.getControl( (1000*self.counter)+903 ).setVisible( False )
+        self.getControl( (1000*self.counter)+902 ).setVisible( False )
+        self.getControl( (1000*self.counter)+903 ).setVisible( False )
       else:
-          if not self.alsaCore.hasSwitch(aControl):
-              self.getControl( self.counter + 900 -1 ).controlDown( self.getControl((1000*self.counter)+902) )
-              self.getControl( self.counter + 900 +1 ).controlUp( self.getControl((1000*self.counter)+902) )  
-              self.getControl( (1000*self.counter)+902 ).controlDown( self.getControl( self.counter + 900 +1 ))
-              self.getControl( (1000*self.counter)+902 ).controlUp( self.getControl( self.counter + 900 -1 ))
+        if not self.alsaCore.hasSwitch(aControl):
+          self.getControl( self.counter + 900 -1 ).controlDown( self.getControl((1000*self.counter)+902) )
+          self.getControl( self.counter + 900 +1 ).controlUp( self.getControl((1000*self.counter)+902) )
+          self.getControl( (1000*self.counter)+902 ).controlDown( self.getControl( self.counter + 900 +1 ))
+          self.getControl( (1000*self.counter)+902 ).controlUp( self.getControl( self.counter + 900 -1 ))
       volume = str(self.alsaCore.getVolume(aControl))
       
       self.getControl( 1000*self.counter ).setVisible( True )
@@ -97,30 +93,25 @@ class GUI( xbmcgui.WindowXMLDialog ):
           self.getControl( (1000*self.counter)+902 ).setPercent(int(volume)) 
         except:
           pass
-        self.getControl( (1000*self.counter)+903 ).setLabel( "%.2d %s" % (int(volume), "%",)) 
+        self.getControl( (1000*self.counter)+903 ).setLabel( "%.2d %s" % (int(volume), "%",))
       
       self.counter += 1
-    
 
     def set_mute( self, controlId, set_label = True ):
-      
       i = controlId - 900
       control = self.getControl( (1000*i)+900 ).getLabel()
       label_value = self.getControl( (1000*i)+903 ).getLabel().replace(" %","" )
       if self.getControl( i + 900 ).isSelected():
         self.alsaCore.setVolume( control, "off" )
       else:
-          if not self.alsaCore.hasVolume(control):
-            self.alsaCore.setVolume( control, "on" )
-          else:
-            self.alsaCore.setVolume( control, "on" )
-            if set_label:
-              self.alsaCore.setVolume( control, label_value )
-        
+        if not self.alsaCore.hasVolume(control):
+          self.alsaCore.setVolume( control, "on" )
+        else:
+          self.alsaCore.setVolume( control, "on" )
+          if set_label:
+            self.alsaCore.setVolume( control, label_value )
 
     def set_slider_value( self, controlId ):
-      
-
       i = (controlId - 902)/1000
       self.set_mute(i+900, False)
       control = self.getControl( (1000*i)+900 ).getLabel()
@@ -131,23 +122,23 @@ class GUI( xbmcgui.WindowXMLDialog ):
       self.close()
 
     def onClick( self, controlId ):
-     if ( controlId >= 1000 ):
+      if ( controlId >= 1000 ):
         self.getControl( controlId + 1 ).setLabel("%.2d %s" % (int(self.getControl( controlId ).getPercent()), "%",))
         if self.getControl( controlId ).getPercent() == 0:
           self.getControl( (controlId/1000) + 900 ).setSelected( True )
         else:
-          self.getControl( (controlId/1000) + 900 ).setSelected( False )  
+          self.getControl( (controlId/1000) + 900 ).setSelected( False )
 
-     if ( controlId >= 900 ) and ( controlId <  1000 ):
+      if ( controlId >= 900 ) and ( controlId <  1000 ):
         self.set_mute(controlId)
-   
+
     def onFocus( self, controlId ):
         self.log("Focused: [%i] Previous [%s]" % (controlId,self.controlId,))
-        if self.controlId == 0: self.controlId = controlId     
+        if self.controlId == 0: self.controlId = controlId
         if ( self.controlId >= 1000 ):
-            self.slider_onfocus(controlId)
+          self.slider_onfocus(controlId)
         self.controlId = controlId
-       
+
     def slider_onfocus(self, controlId):
         cur_slider = self.getControl( self.controlId ).getPercent()
         try:
@@ -160,21 +151,19 @@ class GUI( xbmcgui.WindowXMLDialog ):
         if ( self.controlId != controlId ) and slider_set :  
           self.set_slider_value(self.controlId)
           self.control_state[self.controlId] = cur_slider
-       
-    def log(self, msg):
-      xbmc.log("##### [%s] - Debug msg: %s" % (__scriptname__,msg,),level=xbmc.LOGDEBUG )        
-    
-    def onAction( self, action ):
-    
-        if ( action.getButtonCode() == 61453 ):
-          if ( self.controlId >= 1000 ):
-              self.slider_onfocus(0)
-          
-        if ( action.getButtonCode() in CANCEL_DIALOG ):
-          self.log("Exit")
-          if ( self.controlId >= 1000 ) or (action.getId() == 92):
-              self.slider_onfocus(0)
-              self.controlId = 0
-          self.exit_script()
 
+    def log(self, msg):
+      xbmc.log("##### [%s] - Debug msg: %s" % (ADDONNAME,msg,),level=xbmc.LOGDEBUG )
+
+    def onAction( self, action ):    
+      if ( action.getButtonCode() == 61453 ):
+        if ( self.controlId >= 1000 ):
+          self.slider_onfocus(0)
+          
+      if ( action.getButtonCode() in CANCEL_DIALOG ):
+        self.log("Exit")
+        if ( self.controlId >= 1000 ) or (action.getId() == 92):
+          self.slider_onfocus(0)
+          self.controlId = 0
+        self.exit_script()
 

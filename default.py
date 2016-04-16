@@ -25,24 +25,22 @@ import xbmc
 import xbmcaddon
 
 
-__addon__      = xbmcaddon.Addon()
-__scriptname__ = __addon__.getAddonInfo('name')
-__author__     = "Team XBMC"
-__GUI__        = "Team XBMC"
-__scriptId__   = __addon__.getAddonInfo('id')
-__language__   = __addon__.getLocalizedString
-__version__    = __addon__.getAddonInfo("version")
-__cwd__        = __addon__.getAddonInfo('path')
-__profile__    = xbmc.translatePath( __addon__.getAddonInfo('profile') ).decode("utf-8")
-__resource__   = xbmc.translatePath( os.path.join( __cwd__, 'resources', 'lib' ) ).decode("utf-8")
+ADDON      = xbmcaddon.Addon()
+ADDONNAME  = ADDON.getAddonInfo('name')
+ADDONID    = ADDON.getAddonInfo('id')
+LANGUAGE   = ADDON.getLocalizedString
+VERSION    = ADDON.getAddonInfo("version")
+CWD        = ADDON.getAddonInfo('path')
+PROFILE    = xbmc.translatePath( ADDON.getAddonInfo('profile') ).decode("utf-8")
+RESOURCE   = xbmc.translatePath( os.path.join( CWD, 'resources', 'lib' ) ).decode("utf-8")
 
-sys.path.append (__resource__)
+sys.path.append (RESOURCE)
 
-xbmc.log("##### [%s] - Version: %s" % (__scriptname__,__version__,),level=xbmc.LOGDEBUG )
+xbmc.log("##### [%s] - Version: %s" % (ADDONNAME,VERSION,),level=xbmc.LOGDEBUG )
 
 if ( __name__ == "__main__" ):
     import gui
-    ui = gui.GUI( "%s.xml" % __scriptId__.replace(".","-") , __cwd__, "Default")
+    ui = gui.GUI( "%s.xml" % ADDONID.replace(".","-") , CWD, "Default")
     ui.doModal()
     del ui
     sys.modules.clear()
